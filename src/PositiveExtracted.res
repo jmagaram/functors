@@ -12,14 +12,14 @@ module type T = {
   let value: t => domain
 }
 
-module MakeValidated = (C: Config): (T with type domain := C.domain) => {
+module Make = (C: Config): (T with type domain := C.domain) => {
   type t = C.domain
   let make = C.validate
   let value = v => v
 }
 
 @genType
-module PositiveInt = MakeValidated({
+module PositiveInt = Make({
   type domain = int
   let validate = n =>
     if n > 0 {

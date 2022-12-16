@@ -3,7 +3,7 @@ module type Config = {
   let validate: domain => option<domain>
 }
 
-module MakeValidateds = (C: Config): {
+module Make = (C: Config): {
   type t
   @genType
   let make: C.domain => option<t>
@@ -16,7 +16,7 @@ module MakeValidateds = (C: Config): {
 }
 
 @genType
-module PositiveInt = MakeValidateds({
+module PositiveInt = Make({
   type domain = int
   let validate = n =>
     if n > 0 {
