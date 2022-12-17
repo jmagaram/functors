@@ -2,7 +2,7 @@
 
 ## The problem
 
-`PositiveExtracted` and `PositiveInline` are two version of the same thing. The only difference is that in one of them the return type of a functor is named and referenced, and in the other the return type is inlined. The inlined version works from TypeScript while the other won't load. You can see the `.gen.tsx` files look very different. Why does one work but the other does not? What rules should be followed to ensure GenType produces the desired result?
+Why doesn't the test for `PositiveIntBroken` work? Functionally it seems similar to the other implementations except everything is put in a single file.
 
 ## Run the tests with `npm test`
 
