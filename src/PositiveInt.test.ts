@@ -1,4 +1,4 @@
-import { PositiveInt } from "./PositiveInlined.gen";
+import * as PositiveInt from "./PositiveInt.gen";
 
 test("can make positive int", () => {
   const i = PositiveInt.make(3);

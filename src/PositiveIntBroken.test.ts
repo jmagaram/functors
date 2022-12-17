@@ -1,4 +1,4 @@
-import { PositiveInt } from "./PositiveExtracted.gen";
+import { PositiveInt } from "./PositiveIntBroken.gen";
 
 test("can make positive int", () => {
   const i = PositiveInt.make(3);
