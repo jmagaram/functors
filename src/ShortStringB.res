@@ -20,9 +20,7 @@ module Config = {
   let eq = (a: string, b: string) => a == b
 }
 
-// This is NOT what I want to do. My pattern is to define each type in its own
-// module, not a sub-module like this. And in any case the resultant TypeScript
-// has errors.
-
-@genType
-module Contents = Primitive.Make(Config)
+// This approach is closer to what I want but it is annoying because I need to
+// repeat the type definition of the module type in the *.resi file and insert
+// @gentype annotations everywhere. I'm also getting an error on ./JSON.gen.
+include Primitive.Make(Config)

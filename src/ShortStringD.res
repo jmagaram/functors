@@ -20,9 +20,5 @@ module Config = {
   let eq = (a: string, b: string) => a == b
 }
 
-// This is NOT what I want to do. My pattern is to define each type in its own
-// module, not a sub-module like this. And in any case the resultant TypeScript
-// has errors.
-
-@genType
-module Contents = Primitive.Make(Config)
+// No TypeScript is generated from the .resi file. Maybe @genType annotations are ignored when using include statements.
+include Primitive.MakeAnnotated(Config)

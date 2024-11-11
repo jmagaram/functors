@@ -1,4 +1,4 @@
-module T = ShortStringA.Contents
+module T = ShortStringB
 
 let a = T.makeExn("hello")
 let b = T.makeExn("goodbye")
