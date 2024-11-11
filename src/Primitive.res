@@ -1,3 +1,5 @@
+// This is a for a NewType-like pattern where basic types like int and string
+// get wrapped with useful validation and serialization functions.
 module type T = {
   type domain
   type t
